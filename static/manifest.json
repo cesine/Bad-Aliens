@@ -1,0 +1,17 @@
+{
+  "name": "Wooden Puzzle Game",
+  "version": "1.0",
+  "description": "A game.",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "offline_enabled": true,
+
+  "permissions": [
+    
+    "http://api.flickr.com/"
+  ]
+}
+

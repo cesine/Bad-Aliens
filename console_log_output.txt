@@ -1,0 +1,25 @@
+soundmanager2-jsmin.js:34-- SoundManager 2 V2.97a.20110306 (AS3/Flash 9), MovieStar mode, normal polling, flash debug mode --
+soundmanager2-jsmin.js:34soundManager::createMovie(): Trying to load swf/soundmanager2_flash9_debug.swf
+soundmanager2-jsmin.js:34soundManager::initMovie(): Got EMBED element (created via JS)
+soundmanager2-jsmin.js:34soundManager::initMovie(): Waiting for ExternalInterface call from Flash..
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/alien-explosion.png is loaded
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/alien.png is loaded
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/bullet.png is loaded
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/earth.png is loaded
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/sentry.png is loaded
+app.js:46file:///Users/gina/Downloads/Bad-Aliens/static/img/explosion.png is loaded
+app.js:194Starting input
+app.js:212Input started
+app.js:181game initialized
+app.js:185starting game
+soundmanager2-jsmin.js:34soundManager: Getting impatient, still waiting for Flash (SWF loaded)...
+soundmanager2-jsmin.js:34soundManager::externalInterfaceOK() (~30 ms)
+soundmanager2-jsmin.js:34-- soundManager::init() --
+soundmanager2-jsmin.js:34soundManager: Attempting to call Flash from JS..
+soundmanager2-jsmin.js:34(Flash): SM2 SWF V2.97a.20110306 (AS3/Flash 9)
+soundmanager2-jsmin.js:34Flash security sandbox type: localTrusted
+soundmanager2-jsmin.js:34(Flash): JS to/from Flash OK
+soundmanager2-jsmin.js:34(Flash): Enabling polling, 50 ms interval
+soundmanager2-jsmin.js:34-- SoundManager 2 loaded (OK) --
+soundmanager2-jsmin.js:34soundManager: Firing 1 onready() item
+app.js:66soundManager ready
