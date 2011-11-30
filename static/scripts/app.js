@@ -1,8 +1,8 @@
 
 soundManager.url = 'swf/';
 soundManager.flashVersion = 9;
-soundManager.debugFlash = true; //if flash has no permissions to run on file:// then add an exception here http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html
-soundManager.debugMode = true;
+soundManager.debugFlash = false; //if flash has no permissions to run on file:// then add an exception here http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html
+soundManager.debugMode = false;
 
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
