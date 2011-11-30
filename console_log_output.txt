@@ -1,3 +1,50 @@
+/*
+First run: game seems broken, but in reality flash needs permission.
+*/
+
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/alien-explosion.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/alien.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/bullet.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/sentry.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/explosion.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/earth.png is loaded
+app.js:72 SM2 did not start
+
+/*
+Solution: turn on debugging
+soundManager.debugFlash = true; //if flash has no permissions to run on file:// then add an exception here http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html
+soundManager.debugMode = true;
+*/
+
+-- SoundManager 2 V2.97a.20110306 (AS3/Flash 9), MovieStar mode, normal polling, flash debug mode --
+soundmanager2-jsmin.js:34soundManager::createMovie(): Trying to load swf/soundmanager2_flash9_debug.swf
+soundmanager2-jsmin.js:34soundManager::initMovie(): Got EMBED element (created via JS)
+soundmanager2-jsmin.js:34soundManager::initMovie(): Waiting for ExternalInterface call from Flash..
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/alien-explosion.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/alien.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/bullet.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/sentry.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/explosion.png is loaded
+app.js:46chrome-extension://mngfikggcidkfkagamgpmphabekokcgf/img/earth.png is loaded
+soundmanager2-jsmin.js:34soundManager: Getting impatient, still waiting for Flash (SWF loaded)...
+soundmanager2-jsmin.js:34soundManager: No Flash response within expected time.
+Likely causes: Flash blocked or JS-Flash security error. See SWF output for more debug info.
+soundmanager2-jsmin.js:34soundManager: Non-HTTP page (chrome-extension: URL?) Review Flash player security settings for this special case:
+http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html
+May need to add/allow path, eg. c:/sm2/ or /users/me/sm2/
+soundmanager2-jsmin.js:34soundManager: Failed to initialise.
+soundmanager2-jsmin.js:34soundManager.disable(): Shutting down
+soundmanager2-jsmin.js:34-- SoundManager 2 failed to load (security/load error) --
+soundmanager2-jsmin.js:34soundManager: Firing 1 ontimeout() item
+app.js:72SM2 did not start
+
+
+/*
+Solution: add the path of the game on the local file system to the list of exceptions here:
+http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html
+*/
+
+
 soundmanager2-jsmin.js:34-- SoundManager 2 V2.97a.20110306 (AS3/Flash 9), MovieStar mode, normal polling, flash debug mode --
 soundmanager2-jsmin.js:34soundManager::createMovie(): Trying to load swf/soundmanager2_flash9_debug.swf
 soundmanager2-jsmin.js:34soundManager::initMovie(): Got EMBED element (created via JS)
@@ -23,3 +70,8 @@ soundmanager2-jsmin.js:34(Flash): Enabling polling, 50 ms interval
 soundmanager2-jsmin.js:34-- SoundManager 2 loaded (OK) --
 soundmanager2-jsmin.js:34soundManager: Firing 1 onready() item
 app.js:66soundManager ready
+
+/*
+Conclusion:
+Added a boolean to control sound, so the game can play without it. This is an expected feature for a game anyway.
+*/

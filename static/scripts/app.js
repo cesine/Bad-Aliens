@@ -70,6 +70,7 @@ AssetManager.prototype.downloadSounds = function(soundsCallback) {
   });
   soundManager.ontimeout(function() {
     console.log('SM2 did not start');
+    //TODO should detect if sound didnt work, turn sound off and "restart" the game with the sound set to off
   });
 }
 
@@ -573,14 +574,18 @@ ASSET_MANAGER.queueDownload('img/sentry.png');
 ASSET_MANAGER.queueDownload('img/explosion.png');
 
 /*
-Allow programmer to turn sound off
+Allow programmer to turn sound off (so game will still play even if Flash security permissions havent been set
+see console_log_output.txt for more info
+TODO turn into a UI element (button) for user to understand what is going on
  */
-game.soundSwitch= "on";
+game.soundSwitch= "off";
+console.log("Sound is switched " + game.soundSwitch);
 if(game.soundSwitch !== "off"){
   ASSET_MANAGER.queueSound('alien-boom', 'audio/alien_boom.mp3');
   ASSET_MANAGER.queueSound('bullet-boom', 'audio/bullet_boom.mp3');
   ASSET_MANAGER.queueSound('bullet', 'audio/bullet.mp3');
 }
+
 ASSET_MANAGER.downloadAll(function() {
   game.init(ctx);
   game.start();
